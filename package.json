@@ -1,0 +1,85 @@
+{
+  "name": "effector-controls",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raidenmiro/efform-private"
+  },
+  "homepage": "https://github.com/raidenmiro/efform-private",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/raidenmiro/efform-private/issues"
+  },
+  "author": "",
+  "main": "./dist/cjs/index.js",
+  "browser": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "default": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "node": "./dist/cjs/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "build": "rollup -c",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "build:demo": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ./src/**/*.{ts,tsx}",
+    "lint": "eslint --fix ./src/**/*.{ts,tsx}",
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@commitlint/cli": "^17.0.3",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@swc/core": "^1.2.239",
+    "@types/node": "^18.6.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "@vitest/ui": "^0.20.3",
+    "effector": "^22.3.0",
+    "effector-react": "^22.1.6",
+    "zod": "^3.17.10",
+    "eslint": "^8.21.0",
+    "eslint-import-resolver-typescript": "^3.4.0",
+    "eslint-kit": "^6.1.1",
+    "git-cz": "^4.9.0",
+    "lefthook": "^1.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.78.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-swc3": "^0.3.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vitest": "^0.20.3"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "effector": ">=22.3.0",
+    "effector-react": ">=22.1.6",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "zod": ">=3.17.10"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  }
+}

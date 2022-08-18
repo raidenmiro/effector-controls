@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if commitlint --edit --verbose; then
+  echo "use conversion commit"
+  exit 1
+fi
