@@ -27,7 +27,7 @@ const form = createForm({
 ```tsx
 const Password = createViewControl({
   bind: password,
-  view: ({register}) => <Input {...register('password')} />,
+  view: ({register}) => <Input {...register} />,
  })
 
 const Email = createViewControl({
